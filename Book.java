@@ -25,8 +25,9 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    @Override
     public String toString() {
-        return "Название книги - " + bookName + " Автор - " + author + " Год публикации - " + publishingYear + " г.";
+        return "Название книги - " + bookName + " Автор - " + author.toString() + " Год публикации - " + publishingYear + " г.";
     }
 
     @Override
