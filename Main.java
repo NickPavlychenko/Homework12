@@ -24,7 +24,7 @@ public class Main {
         System.out.println();
 
         Book book3 = new Book("Война и Мир ", new Author("Лев Толстой"), 1867);
-        System.out.println("Книга 1 равна Книге 2? " + book1.equals(book3));
+        System.out.println("Книга 1 равна Книге 3? " + book1.equals(book3));
         System.out.println();
 
         HashSet<Book> books = new HashSet<>();
