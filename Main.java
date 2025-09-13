@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -11,13 +13,24 @@ public class Main {
         Book book1 = new Book("Война и Мир ", author1, 1867);
         Book book2 = new Book("Мастер и Маргарита", author2, 1940);
 
-        System.out.println("Название книги - " + book1.getBookName() + " Автор - " + book1.getAuthor() + " Год публикаци - " + book1.getPublishingYear() + "г.");
+        System.out.println(book1);
         System.out.println();
 
-        System.out.println("Название книги - " + book2.getBookName() + " Автор - " + book2.getAuthor() + " Год публикаци - " + book2.getPublishingYear() +"г.");
+        System.out.println(book2);
         System.out.println();
 
         book2.setPublishingYear(1950);
-        System.out.println("Название книги - " + book2.getBookName() + " Автор - " + book2.getAuthor() + " Год публикаци - " + book2.getPublishingYear() + "г.");
+        System.out.println(book2);
+        System.out.println();
+
+        Book book3 = new Book("Война и Мир ", new Author("Лев Толстой"), 1867);
+        System.out.println("Книга 1 равна Книге 3? " + book1.equals(book3));
+        System.out.println();
+
+        HashSet<Book> books = new HashSet<>();
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        System.out.println("Количество уникальных книг в HashSet: " + books.size());
     }
 }
